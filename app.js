@@ -22,6 +22,7 @@ app.use("*", (req, res) => {
   res.status(404).json({ status: "fail", message: "route not found." });
 });
 
-app.listen(3000, () => {
-  console.log("running on port 3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`running on port ${PORT}`);
 });
